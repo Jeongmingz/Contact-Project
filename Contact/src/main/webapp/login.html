@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src ="http://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="JS/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>login</title>
+</head>
+<body>
+
+    <div class="container" id="header">
+
+        <h2>Login Page</h2>
+
+        <form action="LoginServlet" name="loginForm" method="post">
+
+            <div class="modal-body">
+                <div class="row mb-3">
+                    <label for="userid" class="col-sm-2 col-form-label">ID</label>
+                    <div class="col-sm-9">
+                        <input type="text" class="form-control" id="userid" placeholder="ID" autocomplete="off" required > 
+                    </div>
+                </div>
+    
+                <div class="row mb-3">
+                    <label for="userpw" class="col-sm-2 col-form-label">PASSWORD</label>
+                    <div class="col-sm-9">
+                        <input type="password" class="form-control" id="userpw" placeholder="PW" autocomplete="off" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-outline-success">Login</button>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo">signup</button>
+            </div>
+
+        </form>
+    </div>
+
+    
+    <form action="SignupServlet" name="signupForm" method="post" id="signupModel">
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header mx-3">
+                        <h3 class="modal-title" id="exampleModalLabel">Signup</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    
+                    <div class="modal-body mx-3">
+                        <div class="row mb-3">
+                            <label for="userid" class="col-form-label col-sm-3 col-form-label">ID</label>
+                            <div class="col-sm-9"> 
+                                <input type="text" class="form-control" id="userid" autocomplete="off" required>
+                            </div>
+                        </div>  
+                        
+                        <div class="row mb-3">
+                            <label for="nuserpw" class="col-form-label col-sm-3 col-form-label">PW</label>
+                            <div class="col-sm-9"> 
+                                <input type="password" class="form-control" id="nuserpw" autocomplete="off" required>
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="renuserpw" class="col-form-label col-sm-3 col-form-label">PW 재입력</label>
+                            <div class="col-sm-9"> 
+                                <input type="password" class="form-control" id="renuserpw" autocomplete="off" required>
+                            </div>
+                        </div>
+                        <div class="alert alert-primary" id="pwd_right">비밀번호가 일치합니다.</div>
+                        <div class="alert alert-primary" id="pwd_wrong">비밀번호가 일치하지 않습니다.</div>
+                    </div>
+                    
+    
+                    <div class="modal-footer mx-3">
+                        <button type="submit" id="submit" class="btn btn-secondary">signup</input>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+</body>
+</html>
